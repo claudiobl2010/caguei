@@ -1,67 +1,8 @@
-<html>
+{% extends "base.html" %}
 
-	<head>
-		<title>Caguei</title>
-	
-		<meta name="description" content="Caguei" />
-		<meta name="keywords" content="caguei" />
-		
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<meta http-equiv="Content-Language" content="pt-br" />
-		
-		<link rel="shortcut icon" href="/static/img/caguei.ico" />
-	
-		<link href='http://fonts.googleapis.com/css?family=Ruda' rel='stylesheet' type='text/css'>
-		<link type="text/css" rel="stylesheet" media="screen" href="/static/css/caguei.css" />
+{% block content %}
 
-		<script type="text/javascript" src="/static/js/jquery-1.7.1.min.js"></script>
-		<script type="text/javascript" src="/static/js/caguei.js"></script>
-		
-		<script type="text/javascript">
-		
-		  var _gaq = _gaq || [];
-		  _gaq.push(['_setAccount', 'UA-3284799-8']);
-		  _gaq.push(['_trackPageview']);
-		
-		  (function() {
-		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		  })();
-		
-		</script>		
-	</head>
+	<input type="text" name="url-cagada" id="url-cagada">
+	<a href="#" id="btn-caguei">Caguei</a>
 
-	<body>
-
-		<div class="bg-topo">
-			
-			<div class="topo">
-				<a href="/">
-					<div class="logo-site"><img src="/static/img/caguei.png"></div>
-					<div class="nome-site"><h1>caguei.com.br</h1></div>
-				</a>
-				<a href="mailto:contato@caguei.com.br">
-					<div class="email-site"><img src="/static/img/email.gif"></div>
-				</a>
-			</div>
-
-			<div class="menu">
-				<a href="/">
-					<div class="item-menu item-menu-home">home</div>
-				</a>
-				<a href="/criar-assunto">
-					<div class="item-menu item-menu-criar-assunto">criar assunto</div>
-				</a>
-			</div>
-			
-			<div class="doc">
-			
-				<input type="text" name="url-cagada" id="url-cagada">
-				<a href="#" id="btn-caguei">Caguei</a>
-			
-			</div>
-
-	</body>
-
-</html>
+{% endblock %}

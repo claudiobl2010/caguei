@@ -1,0 +1,47 @@
+<html>
+
+	<head>
+		<title>{% block title %}Caguei{% endblock %}</title>
+		
+		<link type="text/css" rel="stylesheet" href="/static/css/base.css" />
+		{% block css %}{% endblock %}
+	
+		<script type="text/javascript" src="/static/js/jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" src="/static/js/base.js"></script>
+		{% block js %}{% endblock %}
+		
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-3284799-8']);
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>		
+	</head>
+
+	<body>
+	
+		<h1>Caguei</h1>
+
+		<a href="/">home</a>
+		<a href="/criar-assunto">criar assunto</a>
+		
+		<br><br>
+		<hr>
+		<br>
+		
+		{% block content %}{% endblock %}
+
+		<br><br>
+		<hr>
+		<br>
+		
+		Rodapé
+
+	</body>
+
+</html>
