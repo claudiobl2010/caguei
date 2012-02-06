@@ -1,8 +1,18 @@
 {% extends "base.html" %}
 
+{% block css %}
+	<link type="text/css" rel="stylesheet" href="/static/css/home.css" />
+{% endblock %}
+	
+{% block js %}
+	<script type="text/javascript" src="/static/js/home.js"></script>
+{% endblock %}
+
 {% block content %}
-
-	<input type="text" name="url-cagada" id="url-cagada">
+	<input type="text" name="url-caguei" id="url-caguei">
 	<a href="#" id="btn-caguei">Caguei</a>
+	
+	<br><br>
 
+	<div id="msg-caguei"></div>
 {% endblock %}
