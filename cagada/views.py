@@ -30,7 +30,7 @@ def cagar(request):
     # Verifica se foi atingida a QTD máxima de cagadas por hora (máximo de 100 cagadas)
     data_ultima_hora = datetime.now() - timedelta(hours=1)
     qtd = Log.objects.filter(ip=request.META['REMOTE_ADDR'], data__gt=data_ultima_hora).count()
-    if qtd > 100:
+    if qtd > 3:
         return HttpResponse(simplejson.dumps({'tipo':'ERROR', 'msg':'Usuário atingiu a quantidade máxima de cagadas por hora!!!'}), content_type="application/json; charset=UTF-8")
     
     
@@ -39,6 +39,8 @@ def cagar(request):
     try:
         page = urllib2.urlopen(url, timeout=3)
     except Exception, e:
+        log = Log(cagada_id=0, tipo='E', ip=request.META['REMOTE_ADDR'])
+        log.save()
         return HttpResponse(simplejson.dumps({'tipo':'ERROR', 'msg':'URL informada não pode ser carregada!!!'}), content_type="application/json; charset=UTF-8")
 
     content = page.read()

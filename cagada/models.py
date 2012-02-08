@@ -18,6 +18,6 @@ class Assunto(models.Model):
 
 class Log(models.Model):
     cagada_id = models.IntegerField(null=False)
-    tipo = models.CharField(max_length=1, null=False, choices=(('U', 'Url'), ('A', 'Assunto')))
+    tipo = models.CharField(max_length=1, null=False, choices=(('U', 'Url'), ('A', 'Assunto'), ('E', 'Erro')))
     ip = models.CharField(max_length=15, null=False)
     data = models.DateTimeField(null=False, auto_now_add=True)
