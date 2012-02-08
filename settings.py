@@ -123,6 +123,10 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
 )
 
+SESSION_COOKIE_NAME = 'sessionid_caguei'
+SESSION_COOKIE_AGE = 3600
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
 # the site admins on every HTTP 500 error.
