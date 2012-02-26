@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block css %}
+	<link type="text/css" rel="stylesheet" href="/static/css/url-detalhe.css" />
+{% endblock %}
+	
+{% block js %}
+	<script type="text/javascript" src="/static/js/url-detalhe.js"></script>
+{% endblock %}
+
+{% block content %}
+
+<b>URL</b> = <a href="/url/{{ url.id }}">{{ url.url }}</a>
+<br>
+<b>Titulo</b> = {{ url.titulo }}
+<br>
+<b>Descrição</b> = {{ url.descricao }}
+<br><br>
+<b>{{ url.qtd }}</b> cagadas
+
+{% endblock %}

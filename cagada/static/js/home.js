@@ -13,7 +13,15 @@ $(document).ready(function() {
 				success: function(response) {
 					//$('#msg-caguei').html(response.msg);
 					if (response.tipo == "SUCCESS") {
-						$('#msg-caguei').html(response.tipo + ' = ' + response.msg);
+						var tmpl_html = '';
+						tmpl_html += response.tipo + ' = ' + response.msg;
+						tmpl_html += '<br>';
+						tmpl_html += '<a href="/url/' + response.url.id + '/detalhe">Veja aqui os detalhes de sua cagada</a>';
+						tmpl_html += '<br><br>';
+						tmpl_html += 'COMPARTILHE<br>';
+						tmpl_html += '<a href="/url/' + response.url.id + '">caguei</a> | twitter | facebook | google plus';
+						
+						$('#msg-caguei').html(tmpl_html);
 					}
 					else {
 						$('#msg-caguei').html(response.tipo + ' = ' + response.msg);
