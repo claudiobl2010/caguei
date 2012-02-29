@@ -10,12 +10,19 @@
 
 {% block content %}
 
-<b>URL</b> = <a href="/url/{{ url.id }}">{{ url.url }}</a>
+<b>URL</b> = <a href="/{{ url.id }}"><span id="url-caguei">{{ url.url }}</span></a>
 <br>
 <b>Titulo</b> = {{ url.titulo }}
 <br>
 <b>Descrição</b> = {{ url.descricao }}
 <br><br>
-<b>{{ url.qtd }}</b> cagadas
+<span id="qtd-caguei"><b>{{ url.qtd }}</b> cagadas</span>
+<br><br>
+
+{% if url.caguei %}Caguei{% else %}<span id="btn-caguei"><a href="#">Caguei</a></span>{% endif %} | twitter | facebook | google plus
+
+<br><br>
+
+<div id="msg-caguei"></div>
 
 {% endblock %}

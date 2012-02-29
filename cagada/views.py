@@ -81,4 +81,8 @@ def cagar(request):
 def url_detalhe(request, url_id):
     url_obj = get_object_or_404(Url, pk=url_id)
 
+    # Verifica se usuário já cagou na URL
+    cagadas = request.session.get('cagadas').split(',') if request.session.get('cagadas') else []
+    url_obj.caguei = True if cagadas.count(url_obj.hash) else False
+
     return render_to_response('url-detalhe.html', {'url':url_obj})
