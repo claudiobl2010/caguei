@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block css %}
+	<link type="text/css" rel="stylesheet" href="/static/css/assunto-detalhe.css" />
+{% endblock %}
+	
+{% block js %}
+	<script type="text/javascript" src="/static/js/assunto-detalhe.js"></script>
+{% endblock %}
+
+{% block content %}
+
+<b>Descrição</b> = <span id="assunto-caguei">{{ assunto.descricao }}</span>
+<br><br>
+<span id="qtd-caguei"><b>{{ assunto.qtd }}</b> cagadas</span>
+<br><br>
+
+{% if assunto.caguei %}Caguei{% else %}<span id="btn-caguei"><a href="#">Caguei</a></span>{% endif %} | twitter | facebook | google plus
+
+<br><br>
+
+<div id="msg-caguei"></div>
+
+{% endblock %}

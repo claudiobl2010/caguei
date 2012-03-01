@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block css %}
+	<link type="text/css" rel="stylesheet" href="/static/css/criar-assunto.css" />
+{% endblock %}
+	
+{% block js %}
+	<script type="text/javascript" src="/static/js/criar-assunto.js"></script>
+{% endblock %}
+
+{% block content %}
+<textarea name="assunto" id="id-assunto" rows="5" cols="40"></textarea>	
+
+<br>
+
+<a href="#" id="btn-criar">Criar</a>
+
+	<br><br>
+
+	<div id="msg-criar"></div>
+{% endblock %}
