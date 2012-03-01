@@ -128,3 +128,13 @@ def cagar_assunto(request):
     log.save()
 
     return HttpResponse(simplejson.dumps({'tipo':'SUCCESS', 'msg':'Você e + %s pessoas cagaram para isso.' % assunto_obj.qtd if assuntos else 'Você acaba de dar uma nova cagada. Parabéns!', 'assunto': {'id': assunto_obj.id, 'qtd': assunto_obj.qtd}}), content_type="application/json; charset=UTF-8")
+
+def assunto_detalhe(request, assunto_id):
+    assunto_obj = get_object_or_404(Assunto, pk=assunto_id)
+
+    # Verifica se usuário já cagou no assunto
+    cagadas = request.session.get('cagadas').split(',') if request.session.get('cagadas') else []
+    assunto_obj.caguei = True if cagadas.count(assunto_obj.hash) else False
+
+    return render_to_response('assunto-detalhe.html', {'assunto':assunto_obj})
+

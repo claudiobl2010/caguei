@@ -7,5 +7,6 @@ urlpatterns = patterns('caguei.cagada.views',
     (r'^url/(?P<url_id>\d+)/?$', 'url_detalhe'),
     (r'^criar-assunto/?$', 'criar_assunto'),
     (r'^cagar-assunto/?$', 'cagar_assunto'),
+    (r'^assunto/(?P<assunto_id>\d+)/?$', 'assunto_detalhe'),
 
 )
