@@ -1,0 +1,52 @@
+<html>
+
+	<head>
+		<title> Caguei: {{ url.titulo }}</title>
+		
+		<link type="text/css" rel="stylesheet" href="/static/css/base.css" />
+		<link type="text/css" rel="stylesheet" href="/static/css/url-compartilhar.css" />
+
+
+<style>
+// Como fazer a barra superior: http://softwareas.com/styling-a-top-bar
+// body { overflow: hidden; }
+// iframe, div, body { margin: 0; padding: 0; }
+// #bar { position: absolute; top: 0; left: 0; width: 100%; height: 50px; z-index: 100; background: #ddf; border-bottom: 1px solid #888; }
+// iframe { margin-top: 50px; width: 100%; height: 100%; }
+</style>
+	
+		<script type="text/javascript" src="/static/js/jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" src="/static/js/base.js"></script>
+		<script type="text/javascript" src="/static/js/url-compartilhar.js"></script>
+
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-3284799-8']);
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>		
+	</head>
+
+	<body>
+	
+		<div id="bar">
+			<h1>caguei.com.br </h1>
+			<br><span id="qtd-caguei"><b>{{ url.qtd }}</b> cagadas</span>
+			<br> {% if url.caguei %}Caguei{% else %}<span id="btn-caguei"><a href="#">Caguei</a></span>{% endif %} | twitter | facebook | google plus
+
+			<br><br>
+
+			<div id="msg-caguei"></div>
+
+		</div>
+
+		<br><br>
+		<iframe id="iframe-compartilhar" src="{{ url.url }}"> </iframe>
+	</body>
+
+</html>
