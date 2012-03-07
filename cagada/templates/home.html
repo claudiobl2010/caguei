@@ -15,4 +15,27 @@
 	<br><br>
 
 	<div id="msg-caguei"></div>
+
+	<br><br>
+
+    <h3>Top 10 URL's</h3><br>
+
+	{% for url in top_urls %}
+	<a href="/{{ url.id }}">{{ url.url }}</a><br>
+	<b>{{ url.qtd }}</b> cagadas <br><br>
+		
+	{% endfor %}
+
+	<br><br>
+
+    <h3>Top 10 Assuntos</h3><br>
+
+	{% for assunto in top_assuntos %}
+	<a href="/assunto/{{ assunto.id }}">{{ assunto.descricao }}</a><br>
+	<b>{{ assunto.qtd }}</b> cagadas <br><br>
+	
+	
+	{% endfor %}
+
 {% endblock %}
+

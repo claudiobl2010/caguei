@@ -15,8 +15,10 @@ from django.db.models import F
 from cagada.models import Url, Assunto, Log
 
 def home(request):
-
-    return render_to_response('home.html')
+    
+    top_urls = Url.objects.filter(ranking__gt=0).order_by('ranking')[:10]
+    top_assuntos = Assunto.objects.filter(ranking__gt=0).order_by('ranking')[:10]
+    return render_to_response('home.html', {'top_urls':top_urls, 'top_assuntos':top_assuntos})
 
 def cagar(request):
     # Hash da URL
