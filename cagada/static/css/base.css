@@ -1,0 +1,72 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Segoe UI',Calibri,'Myriad Pro',Myriad,'Trebuchet MS',Helvetica,Arial,sans-serif;
+}
+
+img {
+	border: 0;
+}
+
+.header {
+    height: 55px;
+	background-image: url("/static/img/fundo-header.png");
+}
+
+.header .header-container {
+	margin: 0 auto;
+	width: 960px;
+	display: table;
+}
+
+.header .header-container .title {
+	float: left;
+	margin-left: 10px;
+}
+
+.header .header-container .title a {
+    color: #EEEEEE;
+    text-decoration: none;
+}
+
+.header .header-container .title a img {
+	display: block;
+	float: left;
+	margin-right: 10px;
+    margin-top: 4px;
+}
+
+.header .header-container .title a h1 {
+	display: block;
+	float: left;
+    font-size: 34px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.footer {
+	background-color: #111A28;
+    height: 55px;
+}
+
+.footer .footer-container {
+	margin: 0 auto;
+	width: 960px;
+	display: table;
+}
+
+.footer .footer-container .copyright {
+    float: left;
+    margin-left: 10px;
+    color: #EEEEEE;
+    font-size: 11px;
+    margin-top: 20px;
+}
+
+.footer .footer-container .email {
+    float: right;
+    margin-right: 10px;
+    color: #EEEEEE;
+    font-size: 11px;
+    margin-top: 20px;
+}

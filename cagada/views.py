@@ -14,11 +14,13 @@ from django.db.models import F
 
 from cagada.models import Url, Assunto, Log
 
-def home(request):
-    
+def home(request):    
     top_urls = Url.objects.filter(ranking__gt=0).order_by('ranking')[:10]
     top_assuntos = Assunto.objects.filter(ranking__gt=0).order_by('ranking')[:10]
-    return render_to_response('home.html', {'top_urls':top_urls, 'top_assuntos':top_assuntos})
+    
+    now = datetime.now()
+
+    return render_to_response('home.html', {'top_urls':top_urls, 'top_assuntos':top_assuntos, 'now':now})
 
 def cagar(request):
     # Hash da URL
@@ -87,11 +89,15 @@ def url_detalhe(request, url_id):
     cagadas = request.session.get('cagadas').split(',') if request.session.get('cagadas') else []
     url_obj.caguei = True if cagadas.count(url_obj.hash) else False
 
-    return render_to_response('url-detalhe.html', {'url':url_obj})
+    now = datetime.now()
+
+    return render_to_response('url-detalhe.html', {'url':url_obj, 'now':now})
 
 def criar_assunto(request):
 
-    return render_to_response('criar-assunto.html')
+    now = datetime.now()
+
+    return render_to_response('criar-assunto.html', {'now':now})
 
 def cagar_assunto(request):
     # Hash do assunto
@@ -138,7 +144,9 @@ def assunto_detalhe(request, assunto_id):
     cagadas = request.session.get('cagadas').split(',') if request.session.get('cagadas') else []
     assunto_obj.caguei = True if cagadas.count(assunto_obj.hash) else False
 
-    return render_to_response('assunto-detalhe.html', {'assunto':assunto_obj})
+    now = datetime.now()
+
+    return render_to_response('assunto-detalhe.html', {'assunto':assunto_obj, 'now':now})
 
 def url_compartilhar(request, url_id):
     url_obj = get_object_or_404(Url, pk=url_id)
@@ -147,5 +155,7 @@ def url_compartilhar(request, url_id):
     cagadas = request.session.get('cagadas').split(',') if request.session.get('cagadas') else []
     url_obj.caguei = True if cagadas.count(url_obj.hash) else False
 
-    return render_to_response('url-compartilhar.html', {'url':url_obj})
+    now = datetime.now()
+
+    return render_to_response('url-compartilhar.html', {'url':url_obj, 'now':now})
 

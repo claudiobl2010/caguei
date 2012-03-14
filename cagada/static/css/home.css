@@ -1,0 +1,41 @@
+.page-top {
+	background-color: #F6F6F6;
+    height: 280px;
+}
+
+.page-top .page-top-container {
+	margin: 0 auto;
+	width: 960px;
+	display: table;
+}
+
+.page-top .page-top-container .box-caguei {
+	float: left;
+	margin-left: 10px;
+	width: 200px;
+	height: 200px;
+	background: #555555;
+}
+
+.page-top .page-top-container .box-compartilhar {
+	float: right;
+	margin-right: 20px;
+	margin-top: 60px;
+	background-image: url("/static/img/fundo-compartilhar.png");	
+
+	
+	
+	width: 300px;
+	height: 300px;
+}
+
+.page-bottom {
+    border-top: 1px solid #E5E5E5;
+    margin-top: 1px;
+}
+
+.page-bottom .page-bottom-container {
+	margin: 0 auto;
+	width: 960px;
+	display: table;
+}

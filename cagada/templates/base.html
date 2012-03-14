@@ -1,8 +1,15 @@
 <html>
 
 	<head>
-		<title>{% block title %}Caguei{% endblock %}</title>
+		<title>{% block title %}{% endblock %}</title>
 		
+		<meta name="description" content="{% block description %}{% endblock %}" />
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="Content-Language" content="pt-br" />
+		
+		<link rel="shortcut icon" href="/static/img/caguei.ico" />
+				
 		<link type="text/css" rel="stylesheet" href="/static/css/base.css" />
 		{% block css %}{% endblock %}
 	
@@ -22,10 +29,21 @@
 			})();
 		</script>		
 	</head>
-
+		
 	<body>
 	
-		<h1>Caguei</h1>
+		<div class="header">
+			<div class="header-container">
+				<div class="title">
+					<a href="http://www.caguei.com.br">
+						<img src="/static/img/caguei.png">
+						<h1>caguei.com.br</h1>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		{% block content %}{% endblock %}
 
 		<a href="/">home</a>
 		<a href="/criar-assunto">criar assunto</a>
@@ -33,14 +51,19 @@
 		<br><br>
 		<hr>
 		<br>
-		
-		{% block content %}{% endblock %}
 
 		<br><br>
-		<hr>
-		<br>
-		
-		Rodapé
+
+		<div class="footer">
+			<div class="footer-container">
+				<div class="copyright">
+					© 2012-{{ now|date:"Y" }}. Todos os direitos reservados.
+				</div>
+				<div class="email">
+					contato@caguei.com.br
+				</div>
+			</div>
+		</div>
 
 	</body>
 
