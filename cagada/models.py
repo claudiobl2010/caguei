@@ -8,6 +8,18 @@ class Url(models.Model):
     ranking = models.IntegerField(null=False, default=0)
     hash = models.CharField(max_length=100, null=False)
     criacao = models.DateTimeField(null=False, auto_now_add=True)
+    
+    def get_titulo_curto(self):
+        if len(self.titulo) > 50:
+            return '%s ...' % self.titulo[:50]
+        else:
+            return self.titulo
+
+    def get_url_curta(self):
+        if len(self.url) > 50:
+            return '%s ...' % self.url[:50]
+        else:
+            return self.url
 
 class Assunto(models.Model):
     descricao = models.CharField(max_length=1000, null=False)
@@ -15,6 +27,12 @@ class Assunto(models.Model):
     ranking = models.IntegerField(null=False, default=0)
     hash = models.CharField(max_length=100, null=False)
     criacao = models.DateTimeField(null=False, auto_now_add=True)
+    
+    def get_descricao_curta(self):
+        if len(self.descricao) > 50:
+            return '%s ...' % self.descricao[:50]
+        else:
+            return self.descricao
 
 class Log(models.Model):
     cagada_id = models.IntegerField(null=False)

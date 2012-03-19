@@ -1,41 +1,75 @@
-.page-top {
-	background-color: #F6F6F6;
-    height: 280px;
-}
-
-.page-top .page-top-container {
-	margin: 0 auto;
-	width: 960px;
-	display: table;
-}
-
-.page-top .page-top-container .box-caguei {
-	float: left;
+.top-10 {
+    background-image: url("/static/img/fundo-top-10-lista.png");
+	width: 460px;
+	height: 744px;
 	margin-left: 10px;
-	width: 200px;
-	height: 200px;
-	background: #555555;
-}
-
-.page-top .page-top-container .box-compartilhar {
-	float: right;
-	margin-right: 20px;
-	margin-top: 60px;
-	background-image: url("/static/img/fundo-compartilhar.png");	
-
-	
-	
-	width: 300px;
-	height: 300px;
-}
-
-.page-bottom {
-    border-top: 1px solid #E5E5E5;
-    margin-top: 1px;
-}
-
-.page-bottom .page-bottom-container {
-	margin: 0 auto;
-	width: 960px;
+	margin-right: 10px;
+	margin-bottom: 40px;
 	display: table;
+	float: left;
+}
+
+.top-10 .header-top-10-url {
+    background-image: url("/static/img/fundo-top-10-header.png");
+    color: #EEEEEE;
+    font-size: 22px;
+    font-weight: bold;
+    height: 44px;
+    padding-left: 20px;
+    padding-top: 15px;
+}
+
+.top-10 .header-top-10-assunto {
+    background-image: url("/static/img/fundo-top-10-header.png");
+    color: #EEEEEE;
+    font-size: 22px;
+    font-weight: bold;
+    height: 44px;
+    padding-left: 20px;
+    padding-top: 15px;
+}
+
+.top-10 .header-top-10-url strong,
+.top-10 .header-top-10-assunto strong {
+	color: #A7BCD8;
+}
+
+.top-10 .lista {
+    border-bottom: 1px solid #DDDDDD;
+    padding: 10px 20px;
+    color: #111A28;
+    font-size: 12px;
+	margin-left: 5px;
+	width: 410px;
+}
+
+.top-10 .lista .ordem {
+    color: #4C8397;
+    float: left;
+    font-size: 38px;
+    letter-spacing: -2px;
+    margin-right: 20px;
+    width: 50px;
+    text-align: center;
+}
+
+.top-10 .lista .titulo {
+	height: 15px;
+	overflow: hidden;
+	text-transform: lowercase;
+}
+
+.top-10 .lista .url {
+	color: #4C8397;
+	height: 15px;
+	overflow: hidden;
+	text-transform: lowercase;
+}
+
+.top-10 .lista .assunto {
+	color: #4C8397;
+	height: 15px;
+	overflow: hidden;
+	text-transform: lowercase;
+	font-style: italic;
 }

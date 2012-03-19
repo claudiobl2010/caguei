@@ -63,7 +63,7 @@ img {
 
 .header .header-container .menu .botao {
 	color: #EEEEEE;
-	background: #7B99C6;
+	background: #4c8397;
 }
 
 .header .header-container .menu .botao.botao-home {
@@ -74,7 +74,7 @@ img {
 	padding-top: 4px;
 	height: 26px;
 	margin-top: 12px;
-	border-right: 1px solid #EEEEEE;
+	border-right: 1px solid #356D82;
 	border-radius: 6px 0 0 6px;
 	-moz-border-radius: 6px 0 0 6px;
 	-webkit-border-radius: 6px 0 0 6px;	
@@ -91,6 +91,16 @@ img {
 	-moz-border-radius: 0 6px 6px 0;
 	-webkit-border-radius: 0 6px 6px 0;	
 	border-radius: 0 6px 6px 0;
+}
+
+.page {
+	background: url("/static/img/fundo-page.png") repeat-x #F2F2F2;
+}
+
+.page .page-container {
+	margin: 0 auto;
+	width: 960px;
+	display: table;
 }
 
 .footer {

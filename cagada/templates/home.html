@@ -10,22 +10,6 @@
 
 {% block content %}
 
-	<div class="page-top">
-		<div class="page-top-container">
-			<div class="box-caguei">
-			</div>
-			<div class="box-compartilhar">
-			</div>
-		</div>
-	</div>
-
-	<div class="page-bottom">
-		<div class="page-bottom-container">
-		</div>
-	</div>
-
-	<br><br><br><br><br><br>
-
 	<input type="text" name="url-caguei" id="url-caguei">
 	<a href="#" id="btn-caguei">Caguei</a>
 	
@@ -33,26 +17,40 @@
 
 	<div id="msg-caguei"></div>
 
-	<br><br>
-
-    <h3>Top 10 URL's</h3><br>
-
-	{% for url in top_urls %}
-	<a href="/{{ url.id }}">{{ url.url }}</a><br>
-	<b>{{ url.qtd }}</b> cagadas <br><br>
-		
-	{% endfor %}
-
-	<br><br>
-
-    <h3>Top 10 Assuntos</h3><br>
-
-	{% for assunto in top_assuntos %}
-	<a href="/assunto/{{ assunto.id }}">{{ assunto.descricao }}</a><br>
-	<b>{{ assunto.qtd }}</b> cagadas <br><br>
+	<br><br><br><br><br><br>
+	<br><br><br><br><br><br>
+	<br><br><br><br><br><br>
+	<br><br><br><br><br><br>
 	
+	<div class="top-10">
+		<div class="header-top-10-url">top 10 <strong>url</strong></div>
+
+		{% for url in top_urls %}
+			<a href="/{{ url.id }}">
+				<div class="lista">
+					<div class="ordem">{{ forloop.counter}}º</div>
+					<div class="titulo">{{ url.get_titulo_curto }}</div>
+					<div class="url">{{ url.get_url_curta }}</div>
+					<div class="qtd"><strong>{{ url.qtd }}</strong> cagadas</div>
+				</div>
+			</a>
+		{% endfor %}
+	</div>
 	
-	{% endfor %}
+	<div class="top-10">
+		<div class="header-top-10-assunto">top 10 <strong>assunto</strong></div>
+
+		{% for assunto in top_assuntos %}
+			<a href="/assunto/{{ assunto.id }}">
+				<div class="lista">
+					<div class="ordem">{{ forloop.counter}}º</div>
+					<div class="data">{{ assunto.criacao }}</div>
+					<div class="assunto">{{ assunto.get_descricao_curta }}</div>
+					<div class="qtd"><strong>{{ assunto.qtd }}</strong> cagadas</div>
+				</div>
+			</a>
+		{% endfor %}
+	</div>
 
 {% endblock %}
 

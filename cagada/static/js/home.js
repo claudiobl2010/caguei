@@ -1,5 +1,11 @@
 $(document).ready(function() {
 
+	$(".top-10 .lista").mouseover(function() {
+		$(this).css("background-color", "#EEEEEE");
+	}).mouseout(function() {
+		$(this).css("background-color", "");
+	});
+	
 	$('#btn-caguei').click(function() {
 		if ($('#url-caguei').val() == "") {
 			$('#msg-caguei').html("URL deve ser preenchida!!!");
