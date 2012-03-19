@@ -4,6 +4,19 @@
 	font-family: 'Segoe UI',Calibri,'Myriad Pro',Myriad,'Trebuchet MS',Helvetica,Arial,sans-serif;
 }
 
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+a:focus {
+	outline-style: none;
+	outline-width: 0;
+}
+
 img {
 	border: 0;
 }
@@ -26,7 +39,6 @@ img {
 
 .header .header-container .title a {
     color: #EEEEEE;
-    text-decoration: none;
 }
 
 .header .header-container .title a img {
@@ -42,6 +54,43 @@ img {
     font-size: 34px;
     font-weight: bold;
     margin-top: 5px;
+}
+
+.header .header-container .menu {
+	float: right;
+	margin-right: 100px;
+}
+
+.header .header-container .menu .botao {
+	color: #EEEEEE;
+	background: #7B99C6;
+}
+
+.header .header-container .menu .botao.botao-home {
+	display: block;
+	float: left;
+	width: 130px;
+	text-align: center;
+	padding-top: 4px;
+	height: 26px;
+	margin-top: 12px;
+	border-right: 1px solid #EEEEEE;
+	border-radius: 6px 0 0 6px;
+	-moz-border-radius: 6px 0 0 6px;
+	-webkit-border-radius: 6px 0 0 6px;	
+}
+
+.header .header-container .menu .botao.botao-criar-assunto {
+	display: block;
+	float: right;
+	width: 130px;
+	text-align: center;
+	padding-top: 4px;
+	height: 26px;
+	margin-top: 12px;
+	-moz-border-radius: 0 6px 6px 0;
+	-webkit-border-radius: 0 6px 6px 0;	
+	border-radius: 0 6px 6px 0;
 }
 
 .footer {
