@@ -41,19 +41,25 @@ img {
     color: #EEEEEE;
 }
 
-.header .header-container .title a img {
+.header .header-container .title a h1 {
+	background: url("/static/img/caguei.png");
 	display: block;
 	float: left;
+	font-size: 10px;
+	color: #FFFFFF;
+	width: 45px;
+	height: 45px;
+	text-indent: -9999px;
 	margin-right: 10px;
     margin-top: 4px;
 }
 
-.header .header-container .title a h1 {
+.header .header-container .title a span {
 	display: block;
 	float: left;
     font-size: 34px;
     font-weight: bold;
-    margin-top: 5px;
+    margin-top: 5px;	
 }
 
 .header .header-container .menu {
