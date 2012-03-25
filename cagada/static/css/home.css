@@ -1,3 +1,50 @@
+.box-caguei {
+	display: table;
+	float: left;
+	background: #ccc;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 45px;
+	margin-top: 65px;
+	width:620px;
+}
+
+.box-compartilhar {
+	display: table;
+	float: left;
+	width:300px;
+	height: 230px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 45px;
+	margin-top: 65px;
+    background-image: url("/static/img/fundo-compartilhar.png");
+}
+
+.box-compartilhar .facebook-box {
+	margin: 20px;
+	overflow: hidden;
+	width: 260px;
+}	
+
+.box-compartilhar .twitter-box {
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 25px;
+}
+
+.box-compartilhar .compartilhar-logo {
+	border-bottom: 1px solid #DDDDDD;
+	padding-bottom: 10px;
+	margin-bottom: 15px;
+	text-align: center;
+}
+
+.box-compartilhar .compartilhar-button {
+	margin-left: 90px;
+	height: 20px;
+}	
+
 .top-10 {
     background-image: url("/static/img/fundo-top-10-lista.png");
 	width: 460px;

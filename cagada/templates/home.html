@@ -10,17 +10,40 @@
 
 {% block content %}
 
-	<input type="text" name="url-caguei" id="url-caguei">
-	<a href="#" id="btn-caguei">Caguei</a>
-	
-	<br><br>
+	<div class="box-caguei">
+		<input type="text" name="url-caguei" id="url-caguei">
+		<a href="#" id="btn-caguei">Caguei</a>
+		<br><br>
+		<div id="msg-caguei"></div>
+	</div>
 
-	<div id="msg-caguei"></div>
-
-	<br><br><br><br><br><br>
-	<br><br><br><br><br><br>
-	<br><br><br><br><br><br>
-	<br><br><br><br><br><br>
+	<div class="box-compartilhar">
+		<div class="facebook-box">
+			<div class="compartilhar-logo">
+				<img src="/static/img/facebook-logo.png">
+			</div>
+			<div class="compartilhar-button">
+				<div id="fb-root"></div>
+				<script>(function(d, s, id) {
+				  var js, fjs = d.getElementsByTagName(s)[0];
+				  if (d.getElementById(id)) return;
+				  js = d.createElement(s); js.id = id;
+				  js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1";
+				  fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));</script>
+				<div class="fb-like" data-send="false" data-layout="button_count" data-width="200" data-show-faces="false" data-font="segoe ui"></div>
+			</div>
+		</div>
+		<div class="twitter-box">
+			<div class="compartilhar-logo">
+				<img src="/static/img/twitter-logo.png">
+			</div>
+			<div class="compartilhar-button">
+				<a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="caguei">Tweet</a>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>		
+			</div>
+		</div>
+	</div>
 	
 	<div class="top-10">
 		<div class="header-top-10-url">top 10 <strong>url</strong></div>
