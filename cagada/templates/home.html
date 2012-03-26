@@ -19,7 +19,19 @@
 	<div class="box-caguei">
 		<input type="text" name="url-caguei" id="url-caguei">
 		<a href="#" id="btn-caguei">Caguei</a>
-		<div id="msg-caguei">para o que você vai cagar hoje?</div>
+		<div id="msg-caguei"></div>
+	</div>
+
+	<div class="widget-facebook">
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+		<div class="fb-like-box" data-href="http://www.facebook.com/vagasti" data-width="300" data-show-faces="true" data-stream="false" data-header="false"></div>		
 	</div>
 
 	<div class="box-compartilhar">
@@ -48,6 +60,39 @@
 				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>		
 			</div>
 		</div>
+	</div>
+
+	<div class="widget-twitter">
+		<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+		<script>
+		new TWTR.Widget({
+		  version: 2,
+		  type: 'search',
+		  search: '#caguei',
+		  interval: 30000,
+		  title: 'caguei.com.br',
+		  subject: 'Caguei',
+		  width: 300,
+		  height: 170,
+		  theme: {
+		    shell: {
+		      background: '#223450',
+		      color: '#eeeeee'
+		    },
+		    tweets: {
+		      background: '#eeeeee',
+		      color: '#111a28',
+		      links: '#4c8397'
+		    }
+		  },
+		  features: {
+		    scrollbar: false,
+		    loop: false,
+		    live: true,
+		    behavior: 'all'
+		  }
+		}).render().start();
+		</script>	
 	</div>
 	
 	<div class="top-10">
