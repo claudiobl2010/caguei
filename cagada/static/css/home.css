@@ -1,12 +1,49 @@
 .box-caguei {
 	display: table;
 	float: left;
-	background: #ccc;
 	margin-left: 10px;
 	margin-right: 10px;
 	margin-bottom: 45px;
 	margin-top: 65px;
 	width:620px;
+}
+
+.box-caguei #url-caguei {
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;	
+    border: 1px solid #CCCCCC;
+    color: #555;
+    font-size: 18px;
+    margin-right: 15px;
+    padding: 10px;
+    width: 450px;
+    background: #FEFEFE;
+    box-shadow: 0 0 20px 3px #888888;
+    -moz-box-shadow: 0 0 20px 3px #888888;
+    -webkit-box-shadow: 0 0 20px 3px #888888;
+}
+
+.box-caguei #btn-caguei {
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+    background: url("/static/img/caguei-btn.png") no-repeat scroll 17px 5px #A7BCD8;
+    border: 1px solid #4C8397;
+    color: #EEEEEE;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 25px 10px 53px;
+}
+
+.box-caguei #msg-caguei {
+	margin-top: 80px;
+	width: 560px;
+	display: table;
+    font-size: 30px;
+    font-style: italic;
+    text-transform: lowercase;
+    color: #4C8397;
 }
 
 .box-compartilhar {
