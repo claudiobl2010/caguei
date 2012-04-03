@@ -21,81 +21,44 @@
 		<a href="#" id="btn-caguei">Caguei</a>
 		<div id="msg-caguei"></div>
 	</div>
-
-	<div class="widget-facebook">
-		<div id="fb-root"></div>
-		<script>(function(d, s, id) {
-		  var js, fjs = d.getElementsByTagName(s)[0];
-		  if (d.getElementById(id)) return;
-		  js = d.createElement(s); js.id = id;
-		  js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1";
-		  fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));</script>
-		<div class="fb-like-box" data-href="http://www.facebook.com/vagasti" data-width="300" data-show-faces="true" data-stream="false" data-header="false"></div>		
-	</div>
-
-	<div class="box-compartilhar">
-		<div class="facebook-box">
-			<div class="compartilhar-logo">
-				<img src="/static/img/facebook-logo.png">
-			</div>
-			<div class="compartilhar-button">
-				<div id="fb-root"></div>
-				<script>(function(d, s, id) {
-				  var js, fjs = d.getElementsByTagName(s)[0];
-				  if (d.getElementById(id)) return;
-				  js = d.createElement(s); js.id = id;
-				  js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1";
-				  fjs.parentNode.insertBefore(js, fjs);
-				}(document, 'script', 'facebook-jssdk'));</script>
-				<div class="fb-like" data-send="false" data-layout="button_count" data-width="200" data-show-faces="false" data-font="segoe ui"></div>
-			</div>
-		</div>
-		<div class="twitter-box">
-			<div class="compartilhar-logo">
-				<img src="/static/img/twitter-logo.png">
-			</div>
-			<div class="compartilhar-button">
-				<a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="caguei">Tweet</a>
-				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>		
-			</div>
-		</div>
-	</div>
-
-	<div class="widget-twitter">
-		<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
-		<script>
-		new TWTR.Widget({
-		  version: 2,
-		  type: 'search',
-		  search: '#caguei',
-		  interval: 30000,
-		  title: 'caguei.com.br',
-		  subject: 'Caguei',
-		  width: 300,
-		  height: 170,
-		  theme: {
-		    shell: {
-		      background: '#223450',
-		      color: '#eeeeee'
-		    },
-		    tweets: {
-		      background: '#eeeeee',
-		      color: '#111a28',
-		      links: '#4c8397'
-		    }
-		  },
-		  features: {
-		    scrollbar: false,
-		    loop: false,
-		    live: true,
-		    behavior: 'all'
-		  }
-		}).render().start();
-		</script>	
-	</div>
 	
-	<div class="top-10">
+	<div class="barra-social">
+
+		<div class="button-social">
+			<div id="fb-root"></div>
+			<script>(function(d, s, id) {
+			  var js, fjs = d.getElementsByTagName(s)[0];
+			  if (d.getElementById(id)) return;
+			  js = d.createElement(s); js.id = id;
+			  js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1";
+			  fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));</script>
+			<div class="fb-like" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="segoe ui"></div>
+		</div>
+
+		<div class="button-social">
+			<a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="caguei">Tweet</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>		
+		</div>
+
+		<div class="button-social">
+			<!-- Coloque esta tag onde você deseja que o botão +1 seja renderizado -->
+			<div class="g-plusone" data-size="medium" data-href="http://www.caguei.com.br"></div>
+			<!-- Coloque esta chamada de renderização conforme necessário -->
+			<script type="text/javascript">
+			  window.___gcfg = {lang: 'pt-BR'};
+			
+			  (function() {
+			    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+			    po.src = 'https://apis.google.com/js/plusone.js';
+			    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+			  })();
+			</script>
+		</div>
+
+	</div>
+
+	<div class="top-10 top-10-url">
 		<div class="header-top-10-url">top 10 <strong>url</strong></div>
 
 		{% for url in top_urls %}
@@ -110,7 +73,7 @@
 		{% endfor %}
 	</div>
 	
-	<div class="top-10">
+	<div class="top-10 top-10-assunto">
 		<div class="header-top-10-assunto">top 10 <strong>assunto</strong></div>
 
 		{% for assunto in top_assuntos %}
@@ -124,5 +87,5 @@
 			</a>
 		{% endfor %}
 	</div>
-
+	
 {% endblock %}

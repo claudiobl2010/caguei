@@ -1,11 +1,17 @@
 $(document).ready(function() {
 
+	$("#btn-caguei").mouseover(function() {
+		$(this).css("background-color", "#A7CCD8");
+	}).mouseout(function() {
+		$(this).css("background-color", "#9ABDC8");
+	});
+
 	$(".top-10 .lista").mouseover(function() {
 		$(this).css("background-color", "#EEEEEE");
 	}).mouseout(function() {
 		$(this).css("background-color", "");
 	});
-	
+
 	$('#btn-caguei').click(function() {
 		if ($('#url-caguei').val() == "") {
 			$('#msg-caguei').html("URL deve ser preenchida!!!");

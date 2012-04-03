@@ -2,8 +2,8 @@
 	display: table;
 	margin-left: 10px;
 	margin-right: 10px;
-	margin-bottom: 120px;
-	margin-top: 120px;
+	margin-bottom: 100px;
+	margin-top: 100px;
 	text-align: center;
 	width: 940px;
 }
@@ -28,12 +28,34 @@
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
-    background: url("/static/img/caguei-btn.png") no-repeat scroll 17px 5px #A7BCD8;
+    background: url("/static/img/caguei-btn.png") no-repeat scroll 17px 5px #9ABDC8;
     border: 1px solid #4C8397;
     color: #EEEEEE;
     font-size: 16px;
     font-weight: bold;
     padding: 10px 25px 10px 53px;
+}
+
+.barra-social {
+	margin-left: 10px;
+	margin-right: 10px;
+	width: 938px;
+	height: 26px;
+	background: #E8E8E8;
+	border: 1px solid #DDDDDD;
+	margin-bottom: 40px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+.barra-social .button-social {
+	float: left;
+	margin-left: 10px;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	width: 100px;
+
 }
 
 #.box-caguei #msg-caguei {
@@ -46,73 +68,23 @@
 #    color: #4C8397;
 #}
 
-.widget-facebook {
-	display: table;
-	width: 300px;
-	float: left;
-	margin-left: 10px;
-	margin-right: 10px;
-	margin-bottom: 65px;
-}
-
-.widget-twitter {
-	display: table;
-	width: 300px;
-	float: left;
-	margin-left: 10px;
-	margin-right: 10px;
-	margin-bottom: 65px;
-}
-
-.box-compartilhar {
-	display: table;
-	float: left;
-	width:298px;
-	height: 256px;
-	margin-left: 10px;
-	margin-right: 10px;
-	margin-bottom: 65px;
-	border: 1px solid;
-	border-top-color: #315C99;
-	border-bottom-color: #AAAAAA;
-	border-left-color: #AAAAAA;
-	border-right-color: #AAAAAA;
-}
-
-.box-compartilhar .facebook-box {
-	margin: 20px;
-	margin-top: 40px;
-	overflow: hidden;
-	width: 258px;
-}	
-
-.box-compartilhar .twitter-box {
-	margin-left: 20px;
-	margin-right: 20px;
-	margin-top: 40px;
-}
-
-.box-compartilhar .compartilhar-logo {
-	border-bottom: 1px solid #DDDDDD;
-	padding-bottom: 10px;
-	margin-bottom: 15px;
-	text-align: center;
-}
-
-.box-compartilhar .compartilhar-button {
-	margin-left: 90px;
-	height: 20px;
-}	
-
 .top-10 {
     background-image: url("/static/img/fundo-top-10-lista.png");
-	width: 460px;
+	width: 450px;
 	height: 744px;
-	margin-left: 10px;
-	margin-right: 10px;
-	margin-bottom: 40px;
+	margin-bottom: 30px;
 	display: table;
 	float: left;
+}
+
+.top-10.top-10-url {
+	margin-left: 10px;
+	margin-right: 20px;
+}
+
+.top-10.top-10-assunto {
+	margin-left: 20px;
+	margin-right: 10px;
 }
 
 .top-10 .header-top-10-url {
@@ -146,7 +118,7 @@
     color: #111A28;
     font-size: 12px;
 	margin-left: 5px;
-	width: 410px;
+	width: 400px;
 }
 
 .top-10 .lista .ordem {
@@ -170,6 +142,7 @@
 	height: 15px;
 	overflow: hidden;
 	text-transform: lowercase;
+	font-weight: bold;
 }
 
 .top-10 .lista .assunto {
@@ -178,4 +151,5 @@
 	overflow: hidden;
 	text-transform: lowercase;
 	font-style: italic;
+	font-weight: bold;
 }
