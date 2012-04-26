@@ -12,7 +12,7 @@ from django.shortcuts import render_to_response, get_object_or_404
 from django.http import HttpResponse
 from django.db.models import F
 
-from cagada.models import Url, Assunto, Log
+from caguei.cagada.models import Url, Assunto, Log
 
 def home(request):    
     top_urls = Url.objects.filter(ranking__gt=0).order_by('ranking')[:10]
