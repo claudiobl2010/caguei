@@ -48,7 +48,8 @@ def cagar(request):
     else:
         # Se a URL nunca foi cagada, verifica se a mesma é válida
         try:
-            page = urllib2.urlopen(url, timeout=3)
+            #page = urllib2.urlopen(url, timeout=3)
+            page = urllib2.urlopen(url)
             content = page.read()
         except Exception, e:
             # Se a URL informada for inválida, é necessário logar a ação desse IP, afim de evitar um ataque com URLs inválidas, que será bloqueado com a verificação de QTD máxima de cagadas por hora
